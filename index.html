@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kendall Badilla | Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar container">
+            <div class="logo">Web Portafolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#" class="btn-nav" onclick="openModal()">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero container">
+        <div class="hero-text">
+            <p>Hello I am</p>
+            <h1>Kendall Badilla F.</h1>
+            <h3>Software Engineer</h3>
+            <p class="description">
+                I design and build scalable, efficient and reliable software
+                solutions.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="btn">View projects</a>
+                <a href="#" class="btn btn-dark" class="btn btn-dark"onclick="openModal()">Contact me</a>
+                
+                
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="Images/PrincipalPicture.png" alt="Imagen decorativa" />
+        </div>
+    </section>
+    <section id="about" class="about container">
+        <h2>About me</h2>
+        <p>
+            I am a Systems Engineering student focused on software development and
+            system design. I build clean, maintainable solutions that solve
+            real-world problems.
+        </p>
+
+        <div class="about-tags">
+            <span>Problem Solver</span>
+            <span>Clean Code Advocate</span>
+            <span>Continuous Learner</span>
+        </div>
+    </section>
+
+    <section id="skills" class="skills container">
+        <h2>Technical & Professional Skills</h2>
+
+        <div class="skills-grid">
+            <div>
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>C++</li>
+                    <li>REST APIs</li>
+                    <li>Databases</li>
+                    <li>Git & GitHub</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Professional Skills</h3>
+                <ul>
+                    <li>Analytical Thinking</li>
+                    <li>Problem-Solving</li>
+                    <li>Team Collaboration</li>
+                    <li>Communication</li>
+                    <li>Adaptability</li>
+                    <li>Continuous Learning</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects container">
+        <h2>Projects</h2>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Muffet Solitario</h3>
+                <p>
+                    A solitaire card game implemented in Java focusing on clean design
+                    and extensibility.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>KoffeFX</h3>
+                <p>
+                    Java system to manage inventory, products and purchases for a fast
+                    food business.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Matchmaker</h3>
+                <p>
+                    JavaFX application designed to manage tournaments and sports
+                    events.
+                </p>
+            </div>
+        </div>
+
+        <div class="github-btn">
+            <a href="https://github.com/2834kendall" target="_blank" class="btn btn-dark">GitHub</a>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="container">
+            <p>Web Portafolio</p>
+        </div>
+    </footer>
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Contact Information</h2>
+            <p><strong>Phone:</strong> +506 7069 9085</p>
+            <p><strong>Email:</strong> kendallbadilla10@gmail.com</p>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById("contactModal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("contactModal").style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            const modal = document.getElementById("contactModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
